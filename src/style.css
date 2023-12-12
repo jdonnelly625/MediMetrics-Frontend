@@ -1,0 +1,237 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	height: 100%;
+	font-family: 'Poppins', sans-serif;
+	background-image: url('static/pitch-background.png');
+	background-size: cover;
+	background-repeat: no-repeat; /* This prevents the image from repeating */
+	background-position: center center;
+	background: linear-gradient(to right,#e5eee3, rgb(73, 145, 79));
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	background-color: #DC0714;
+	background: linear-gradient(to right,#105804, rgb(70, 47, 152));
+	height: 90px;
+	padding: 30px 30px;
+	font-family: 'Poppins', sans-serif;
+	letter-spacing: -1.5px;
+
+}
+.nav--logo {
+
+	max-width: 100px;
+	padding: 0px;
+
+}
+
+
+.nav--title {
+	font-size: 35px;
+	color: white;
+	margin-right: auto;
+}
+
+
+.nav--list {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav--list--option {
+	margin-right: 20px;
+	color: white;
+	font-size: 20px;
+	transition: font-size 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav--list--option:hover {
+    font-size: 23px; /* Slightly larger font size */
+    text-shadow: 2px 2px 4px #000; /* Black text shadow */
+    cursor: pointer;
+}
+
+.dashboard {
+	font-family: 'Inter', sans-serif;
+}
+
+.dashboard--title {
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 4px #000; /* Black text shadow */
+}
+
+.grid-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    padding: 1rem;
+}
+
+.grid-item {
+    border: 1px solid #ddd; /* Lighter border */
+    border-radius: 15px; /* Rounded corners */
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+    
+    align-items: center;
+    
+    padding: 10px;
+    margin: 15px;
+	background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+	
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+	z-index: 0;
+	position:relative;
+	
+}
+
+.grid-item.tall {
+    grid-row: span 3; /* Spans 3 rows */
+}
+
+.grid-item.wide {
+    grid-column: span 2; /* Spans 2 cols */
+}
+
+.grid-item:hover {
+    transform: translateY(-5px); /* Slightly raise the item on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Larger shadow on hover */
+}
+
+.grid-item h2 {
+	
+    font-size: 1rem;
+    color: #333;
+    
+}
+
+.grid-item p {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+}
+
+.grid-item img {
+	margin-top: 0px;
+	max-width: 90%;
+}
+
+/* Table Styles */
+.table-container {
+    margin: 1rem;
+    overflow-x: auto;  /* For responsive scrolling on smaller screens */
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;  /* Remove gaps between table cells */
+    font-family: 'Inter', sans-serif;  /* Consistent font style */
+    font-size: 0.9rem;  /* Adjust font size */
+    text-align: center;  /* Align text to the left */
+}
+
+.table th,
+.table td {
+    padding: 10px 15px;  /* Add padding for table cells */
+    border: 1px solid #ddd;  /* Light border for cells */
+}
+
+.table th {
+    background-color: #f3f3f3;  /* Light background for headers */
+    color: #333;  /* Darker text color for headers */
+}
+
+.table tr:nth-child(odd) {
+    background-color: #fafafa;  /* Zebra-striping for rows */
+}
+
+.table tr:hover {
+    background-color: #f1f1f1;  /* Highlight on hover */
+}
+
+/* Adjust column width if needed */
+.table th:nth-child(1) { 
+    width: 30%; /* Specific width for the first column */
+}
+
+/* Add more as needed for other columns */
+.billable-hours-table {
+    max-width: 100%;   /* Ensure table does not exceed the container width */
+    font-size: .8rem; /* Slightly smaller font size for this table */
+}
+
+.billable-hours-table th, 
+.billable-hours-table td {
+    padding: 10px 2px; /* Slightly smaller padding */
+}
+
+.filter {
+	border: 1px solid #ddd; /* Lighter border */
+    border-radius: 15px; /* Rounded corners */
+    display: flex;
+    flex-direction: row; /* Align children vertically */
+    
+    align-items: center;
+    
+    padding: 0px;
+    margin: 15px;
+	background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+	
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+	
+	position:relative;
+	
+	z-index: 100000;
+}
+
+.filter--item {
+	margin: 10px;
+	margin-right: auto;
+	justify-content: center;
+	padding: 5px;
+	position: relative;
+    z-index: 40000;
+	
+}
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+
+.nav--logo {
+	max-width: 120px;
+	margin-left: -25px;
+}
+
+
+.nav--title {
+    font-size: 25px;
+  	margin-left: -18px;
+}
+
+
+}
